@@ -1,0 +1,23 @@
+<h1>Available accounts</h1>
+
+<table>
+  <tr>
+    <th>Number</th>
+    <th>Amount</th>
+    <th>Pin</th>
+    <th></th>
+  </tr>
+
+  <% @account.each do |account| %>
+    <tr>
+      <td><%= account.number %></td>
+      <td><%= account.amount%></td>
+      <td><%= account.pin%></td>
+      <td><%= link_to 'Show', account_path(account) %></td>
+       <td><%= link_to 'Edit', edit_account_path(account) %></td>
+       <td><%= link_to 'Delete', account_path(account),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>
