@@ -1,0 +1,20 @@
+<h1>Edit account</h1>
+
+<%= form_with scope: :account, url: accounts_path, local: true do |form| %>
+<p>
+  <%= form.label :Number%><br>
+  <%= form.text_field :number %>
+</p>
+
+<p>
+  <%= form.label :Amount%><br>
+  <%= form.text_field:amount %>
+</p>
+<p>
+  <%= form.label :Pin%><br>
+  <%= form.text_field :pin %>
+</p>
+<p>
+  <%= form.submit %>
+</p>
+<% end %>
